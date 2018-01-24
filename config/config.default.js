@@ -17,10 +17,10 @@ var config = {
   }
 }
 var db = {
-  "host": "YOUR_DB_HOST",
-  "database": "YOUR_DB_NAME",
-  "username": "YOUR_DB_USER",
-  "password": "YOUR_DB_PASS",
+  "host": "postgres",
+  "database": "postgres",
+  "username": "postgres",
+  "password": "postgres",
   "port": 5432,
   "dialect": "postgres",
   "modelsPath": path.join(__dirname, "../src/models"),
