@@ -2,6 +2,12 @@
 
 Yet another web app. It's just a skeleton with all the things I normally use. Maybe one day I'll explain here why I use the things I use, but not today.
 
+## Quick start
+Install Docker and docker-compose then use the provided `docker-compose.yml` to get going with a development environment.
+```
+docker-compose up
+```
+
 ## Installation
 This guide assumes you're using a fresh install on [Ubuntu 16.04.2 Server 64-bit]().
 
