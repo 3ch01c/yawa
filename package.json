@@ -18,7 +18,7 @@
     "express": "^4.15.0",
     "file-stream-rotator": "0.0.7",
     "lodash": "^4.17.15",
-    "morgan": "^1.9.1",
+    "morgan": "^1.10.0",
     "nodemon": "^1.11.0",
     "path": "^0.12.7",
     "pg": "^8.0.0",
