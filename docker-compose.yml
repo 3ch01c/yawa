@@ -7,16 +7,28 @@ services:
     environment:
       - NODE_ENV=development
     volumes:
-      - ./:/home/node/app
+      - ./app:/home/node/app
     ports:
       - "3000:3000"
     command: "npm start"
+    healthcheck:
+      test: ["CMD", "curl", "-sko", "/dev/null", "http://localhost:3000"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
   postgres:
     image: postgres
     user: postgres
     environment:
       - POSTGRES_PASSWORD=postgres
     volumes:
-      - data:/var/lib/postgresql/data
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
 volumes:
-  data:
+  pgdata:
